@@ -1,5 +1,7 @@
 package com.example.pexelapi.data.api.model
 
+import com.example.pexelapi.data.local.PhotoEntity
+
 data class Photo(
     val alt: String,
     val avg_color: String,
@@ -14,3 +16,7 @@ data class Photo(
     val width: Int,
     var isSelected:Boolean =false
 )
+
+fun Photo.toPhotoEntity(): PhotoEntity{
+    return PhotoEntity(photoUrl = this.url, photographer = this.photographer)
+}
