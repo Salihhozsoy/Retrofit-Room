@@ -1,4 +1,4 @@
-package com.example.pexelapi.ui.main
+package com.example.pexelapi.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater

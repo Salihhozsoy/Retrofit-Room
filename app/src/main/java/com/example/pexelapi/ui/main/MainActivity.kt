@@ -9,6 +9,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.example.pexelapi.data.api.model.Photo
 import com.example.pexelapi.data.state.PhotoListState
 import com.example.pexelapi.databinding.ActivityMainBinding
+import com.example.pexelapi.ui.adapter.PhotoAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 

@@ -1,4 +1,4 @@
-package com.example.pexelapi.data.di
+package com.example.pexelapi.di
 
 import com.example.pexelapi.data.repository.PhotoRepository
 import com.example.pexelapi.data.repository.PhotoRepositoryImpl
