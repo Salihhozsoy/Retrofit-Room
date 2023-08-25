@@ -8,6 +8,8 @@ import androidx.room.Query
 interface PhotoDao {
     @Insert
     suspend fun addPhoto(photoEntity: PhotoEntity)
+    @Insert
+    suspend fun addPhoto(photoEntities:List<PhotoEntity>)
 
     @Query("select * from PhotoEntity")
     suspend fun getPhotosFromDb() :List<PhotoEntity>

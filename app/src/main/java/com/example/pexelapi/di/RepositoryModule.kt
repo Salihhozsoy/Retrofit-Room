@@ -1,5 +1,7 @@
 package com.example.pexelapi.di
 
+import com.example.pexelapi.data.repository.LocalPhotosRepository
+import com.example.pexelapi.data.repository.LocalPhotosRepositoryImpl
 import com.example.pexelapi.data.repository.PhotoRepository
 import com.example.pexelapi.data.repository.PhotoRepositoryImpl
 import dagger.Module
@@ -13,4 +15,7 @@ object RepositoryModule {
 
     @Provides
     fun providePhotoRepository(photoRepositoryImpl: PhotoRepositoryImpl): PhotoRepository = photoRepositoryImpl
+
+    @Provides
+    fun provideLocalPhotosRepository(localPhotosRepositoryImpl: LocalPhotosRepositoryImpl):LocalPhotosRepository =localPhotosRepositoryImpl
 }

@@ -6,4 +6,6 @@ import com.example.pexelapi.data.api.model.Photo
 interface PhotoRepository {
 
     suspend fun getAllPhotos(query:String):List<Photo>
+
+    suspend fun savePhotosToDb(photos:List<Photo>)
 }

@@ -28,7 +28,6 @@ class MainViewModel @Inject constructor(private val photoRepository: PhotoReposi
                 val photos = photoRepository.getAllPhotos(query)
                 if(photos.isEmpty()) _photoListState.value =PhotoListState.Empty
                 else _photoListState.value =PhotoListState.Result(photos)
-                println(photos.size)
 
             }.onFailure {
                 _photoListState.value =PhotoListState.Error(it)

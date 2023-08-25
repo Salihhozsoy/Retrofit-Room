@@ -1,5 +1,6 @@
 package com.example.pexelapi.ui.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -10,6 +11,7 @@ import com.example.pexelapi.data.api.model.Photo
 import com.example.pexelapi.data.state.PhotoListState
 import com.example.pexelapi.databinding.ActivityMainBinding
 import com.example.pexelapi.ui.adapter.PhotoAdapter
+import com.example.pexelapi.ui.photodetail.PhotoDetailActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -27,6 +29,10 @@ class MainActivity : AppCompatActivity() {
 
         observePhotoListState()
         viewModel.getAllPhotos("animal")
+        binding.btnNextPage.setOnClickListener {
+            val intent= Intent(this,PhotoDetailActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun observePhotoListState() {
