@@ -11,7 +11,6 @@ class PhotoRepositoryImpl @Inject constructor(private val photoService: PhotoSer
     override suspend fun getAllPhotos(query:String):List<Photo> {
       val photos= photoService.getAllPhotos(query).photos
         savePhotosToDb(photos)
-
         return photos
     }
     override suspend fun savePhotosToDb(photos: List<Photo>) {
